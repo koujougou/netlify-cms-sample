@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title><%= current_page.data.title || "Middleman" %></title>
+
+    <meta property="og:title" content="<%= current_page.data.title || 'Middleman' %>" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="<%= get_url(current_page) %>" />
+    <meta property="og:image" content="<%= current_page.url %>/images/1200x630.png" />
+    <meta property="og:site_name" content="Static web demo" />
+    <meta property="og:description" content="This page is sample." />
+
+    <meta name="twitter:description" content="This page is sample.">
+    <meta name="twitter:title" content="<%= current_page.data.title || 'Middleman' %>">
+    <meta name="twitter:url" content="<%= get_url(current_page) %>">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <%= stylesheet_link_tag "main" %>
+    <% if content_for?(:css) %>
+      <%= yield_content :css %>
+    <% end %>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <% if content_for?(:header_js) %>
+      <%= yield_content :header_js %>
+    <% end %>
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v3.2"></script>
+
+    <%= yield %>
+
+    <% if content_for?(:body_js) %>
+      <%= yield_content :body_js %>
+    <% end %>
+  </body>
+</html>

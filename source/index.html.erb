@@ -1,0 +1,64 @@
+---
+title: Middleman Sample TOP Page
+---
+
+<% content_for :body_js do %>
+  <%= javascript_include_tag 'top' %>
+
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+  <script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+<% end %>
+
+<h2>Static WEB page SAMPLE by MIDDLEMAN</h2>
+
+This page is test of the following features
+
+<ul>
+  <li>slider</li>
+  <li>form</li>
+  <li>social links</li>
+</ul>
+
+<div>
+  <a href="inquiry.html">Contanct us</a>
+</div>
+
+<h2>Slider pattern1</h2>
+<div>
+  <div class="slider slider1">
+      <div><a href="markdown.html"><img src="images/640x150_blue.png" alt="blue"></a></div>
+      <div><a href="erb.html"><img src="images/640x150_gray.png" alt="gray"></a></div>
+      <div><a href="raw_html.html"><img src="images/640x150_green.png" alt="green"></a></div>
+      <div><a href="slim.html"><img src="images/640x150_red.png" alt="red"></a></li>
+  </div>
+</div>
+
+<h2>Slider pattern2</h2>
+<div>
+  <div class="slider slider2">
+      <div><a href="markdown.html"><img src="images/640x150_blue.png" alt="blue"></a></div>
+      <div><a href="erb.html"><img src="images/640x150_gray.png" alt="gray"></a></div>
+      <div><a href="raw_html.html"><img src="images/640x150_green.png" alt="green"></a></div>
+      <div><a href="slim.html"><img src="images/640x150_red.png" alt="red"></a></div>
+  </div>
+</div>
+
+<h2>social link pattern1</h2>
+
+<div class="fb-like" data-href="<%= get_url(current_page) %>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+
+<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+
+<div class="line-it-button" style="display: none;" data-lang="ja" data-type="like" data-url="<%= get_url(current_page) %>" data-share="true"></div>
+
+<a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
+
+<h2>social link pattern2</h2>
+
+<div class="fb-like" data-href="<%= get_url(current_page) %>" data-layout="button" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+<div class="line-it-button" style="display: none;" data-lang="ja" data-type="share-b" data-ver="2" data-url="https://hoge.example.com/"></div>
+<a data-pocket-label="pocket" data-pocket-count="none" class="pocket-btn" data-lang="en"></a>
+
+<div>Contents end</div>

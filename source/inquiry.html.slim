@@ -1,0 +1,22 @@
+---
+title: Middleman Sample INQUIRY Page
+---
+
+|  Sample inquiry form by netlify 
+form[name="contact" method="POST" action="/success_inquiry.html" netlify]
+  p
+    label
+      | Your Name: 
+      input[required type="text" name="name"]
+  p
+    label
+      | Your Email: 
+      input[required type="email" name="email"]
+  p
+    label
+      | Message: 
+      textarea[required name="message"]
+  div[data-netlify-recaptcha="true"]
+  p
+    button[type="submit"]
+      | Send
